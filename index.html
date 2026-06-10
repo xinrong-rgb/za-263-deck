@@ -247,6 +247,65 @@
       white-space: pre-line;
     }
 
+    /* === 譬喻頁：左圖右文版面 === */
+    .metaphor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 30px;
+      align-items: center;
+      margin: 0.4em auto 0;
+      max-width: 96%;
+    }
+    .metaphor-img {
+      width: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(184,138,74,0.25);
+      display: block;
+    }
+    .metaphor-text {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .metaphor-text .quote-box {
+      font-size: 32px !important;
+      line-height: 1.8;
+      padding: 18px 22px;
+      margin: 0;
+      max-width: 100%;
+    }
+    .metaphor-text .conclusion-grid {
+      grid-template-columns: 1fr;
+      margin: 0;
+      max-width: 100%;
+      gap: 10px;
+    }
+    .metaphor-text .conclusion-card {
+      padding: 14px 18px;
+      font-size: 26px;
+      line-height: 1.7;
+    }
+    .metaphor-text .conclusion-card .cc-title {
+      font-size: 1.15em;
+      margin-bottom: 6px;
+    }
+    .metaphor-text .conclusion-card ul li {
+      font-size: 26px;
+    }
+    .metaphor-text p {
+      font-size: 30px;
+      line-height: 1.85;
+      margin: 0;
+      text-align: left;
+    }
+    .metaphor-text p.note {
+      font-size: 22px;
+      color: var(--text-mute);
+      font-style: italic;
+    }
+
     /* === 底部頁碼導覽列（最小化，hover 才放大）=== */
     .page-nav {
       position: fixed;
@@ -436,66 +495,65 @@
       </p>
     </section>
 
-    <!-- 7 譬喻一：伏雞 -->
-    <section data-background-image="images/bg-hen.png"
-             data-background-opacity="0.25"
-             data-background-size="cover"
-             data-background-color="#f7f1e6"
-             class="bg-overlay">
+    <!-- 7 譬喻一：伏雞（左圖右文）-->
+    <section data-background-color="#f7f1e6">
       <h2 style="font-size: 1.18em; text-align: center;">譬喻一・伏雞蔭卵</h2>
-      <div class="quote-box">
-        譬如伏雞，生子眾多，<strong style="color: var(--warn);">不能隨時蔭卵</strong>，消息冷暖，而欲令子以觜、以爪啄卵自生……當知彼子<strong style="color: var(--warn);">無有自力</strong>，堪能方便以觜、以爪安隱出殼。
-      </div>
-      <div class="conclusion-grid">
-        <div class="conclusion-card caution">
-          <div class="cc-title">不修</div>
-          <ul><li>雞母不蔭卵 · 冷暖失調</li><li>諸子無力 · 不能自生</li></ul>
-        </div>
-        <div class="conclusion-card positive">
-          <div class="cc-title">勤修</div>
-          <ul><li>善養其子 · 隨時蔭卵</li><li>諸子自能方便 · 安隱出殼</li></ul>
+      <div class="metaphor-grid">
+        <img class="metaphor-img" src="images/ill-hen.png" alt="伏雞蔭卵">
+        <div class="metaphor-text">
+          <div class="quote-box">
+            譬如伏雞，生子眾多，<strong style="color: var(--warn);">不能隨時蔭卵</strong>，消息冷暖，而欲令子以觜、以爪啄卵自生……當知彼子<strong style="color: var(--warn);">無有自力</strong>，堪能方便以觜、以爪安隱出殼。
+          </div>
+          <div class="conclusion-grid">
+            <div class="conclusion-card caution">
+              <div class="cc-title">不修</div>
+              <ul><li>雞母不蔭卵 · 冷暖失調</li><li>諸子無力 · 不能自生</li></ul>
+            </div>
+            <div class="conclusion-card positive">
+              <div class="cc-title">勤修</div>
+              <ul><li>善養其子 · 隨時蔭卵</li><li>諸子自能方便 · 安隱出殼</li></ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 8 譬喻二：斧柯 -->
-    <section data-background-image="images/bg-axe.png"
-             data-background-opacity="0.25"
-             data-background-size="cover"
-             data-background-color="#f7f1e6"
-             class="bg-overlay">
+    <!-- 8 譬喻二：斧柯（左圖右文）-->
+    <section data-background-color="#f7f1e6">
       <h2 style="font-size: 1.18em; text-align: center;">譬喻二・巧師斧柯</h2>
-      <div class="quote-box">
-        譬如巧師、巧師弟子，手持斧柯，<strong style="color: var(--accent);">捉之不已，漸漸微盡，手指處現</strong>，然彼不覺斧柯微盡而盡處現。
+      <div class="metaphor-grid">
+        <img class="metaphor-img" src="images/ill-axe.png" alt="巧師斧柯">
+        <div class="metaphor-text">
+          <div class="quote-box">
+            譬如巧師、巧師弟子，手持斧柯，<strong style="color: var(--accent);">捉之不已，漸漸微盡，手指處現</strong>，然彼不覺斧柯微盡而盡處現。
+          </div>
+          <p>
+            如是比丘精勤修習，隨順成就，<br>
+            <strong style="color: var(--accent);">不自知見</strong>今日爾所漏盡、明日爾所漏盡，<br>
+            然彼比丘<strong style="color: var(--accent2);">知有漏盡</strong> —— 以修習故。
+          </p>
+          <p class="note">譬：漏盡是潛移默化、不待自覺的成就，唯修方至</p>
+        </div>
       </div>
-      <p style="text-align: center; font-size: 0.68em; color: var(--text-soft); margin-top: 1em; max-width: 88%; margin-left: auto; margin-right: auto; line-height: 2.0;">
-        如是比丘精勤修習，隨順成就，<br>
-        <strong style="color: var(--accent);">不自知見</strong>今日爾所漏盡、明日爾所漏盡，<br>
-        然彼比丘<strong style="color: var(--accent2);">知有漏盡</strong> —— 以修習故。
-      </p>
-      <p style="text-align: center; font-size: 0.54em; color: var(--text-mute); margin-top: 1em; font-style: italic;">
-        譬：漏盡是潛移默化、不待自覺的成就，唯修方至
-      </p>
     </section>
 
-    <!-- 9 譬喻三：大舶 -->
-    <section data-background-image="images/bg-ship.png"
-             data-background-opacity="0.25"
-             data-background-size="cover"
-             data-background-color="#f7f1e6"
-             class="bg-overlay">
+    <!-- 9 譬喻三：大舶（左圖右文）-->
+    <section data-background-color="#f7f1e6">
       <h2 style="font-size: 1.18em; text-align: center;">譬喻三・大舶藤綴</h2>
-      <div class="quote-box">
-        譬如大舶，在於海邊，<strong style="color: var(--accent);">經夏六月，風飄、日暴，藤綴漸斷</strong>。
+      <div class="metaphor-grid">
+        <img class="metaphor-img" src="images/ill-ship.png" alt="大舶藤綴">
+        <div class="metaphor-text">
+          <div class="quote-box">
+            譬如大舶，在於海邊，<strong style="color: var(--accent);">經夏六月，風飄、日暴，藤綴漸斷</strong>。
+          </div>
+          <p>
+            如是比丘精勤修習，隨順成就，<br>
+            <strong style="color: var(--warn);">一切結、縛、使、煩惱、纏</strong>，<br>
+            <strong style="color: var(--accent2);">漸得解脫</strong> —— 善修習故。
+          </p>
+          <p class="note">譬：煩惱結纏，隨修習之風日漸自落</p>
+        </div>
       </div>
-      <p style="text-align: center; font-size: 0.68em; color: var(--text-soft); margin-top: 1em; max-width: 88%; margin-left: auto; margin-right: auto; line-height: 2.0;">
-        如是比丘精勤修習，隨順成就，<br>
-        <strong style="color: var(--warn);">一切結、縛、使、煩惱、纏</strong>，<br>
-        <strong style="color: var(--accent2);">漸得解脫</strong> —— 善修習故。
-      </p>
-      <p style="text-align: center; font-size: 0.54em; color: var(--text-mute); margin-top: 1em; font-style: italic;">
-        譬：煩惱結纏，隨修習之風日漸自落
-      </p>
     </section>
 
     <!-- 10 三譬喻共義 -->
