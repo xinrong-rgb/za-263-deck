@@ -573,6 +573,13 @@
       wb.addEventListener(ev, e => e.stopPropagation());
     });
   }
+  // 點白板外面（簡報區）自動收合
+  document.addEventListener('click', (e) => {
+    const sideWB = document.getElementById('side-wb');
+    if (!sideWB || !sideWB.classList.contains('open')) return;
+    if (e.target.closest('.side-wb-panel') || e.target.closest('.side-wb-toggle')) return;
+    sideWB.classList.remove('open');
+  });
 </script>
 
 <!-- 文字雲 Firebase Module -->
